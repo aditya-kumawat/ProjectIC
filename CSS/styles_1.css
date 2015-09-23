@@ -1,0 +1,105 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	font-size: 16px;
+}
+.container{
+	background-color: transparent;
+	height: auto;
+}
+h1.site-name{
+	position: relative;
+	text-align: center;
+	line-height: 100px;
+	color: red;
+	font-size: 2.3em;
+	font-family: "28_Days_Later";
+	border: 0px solid black;
+}
+h1.site-name:after{
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 7.5%;
+	width: 85%;
+	border: 1px solid red;
+	transition: all 0.4s;
+}
+.ic-row{
+	padding: 0px 0px;
+	transition: all 0.4s;
+}
+.gal-container{
+	margin-top: 3%;
+	width: 100%;
+}
+.gal-imgs{
+	display: block;
+	width: 85%;
+	.-webkit-clip-path: polygon(5% 5%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+	.-webkit-mask-image: -webkit-gradient(
+    linear, left center, right center, 
+    color-stop(0.00,  rgba(0,0,0,0.5)),
+    color-stop(0.50,  rgba(0,0,0,.9)),
+    color-stop(1.00,  rgba(0,0,0,0.5)));
+    .-webkit-mask-image: -webkit-gradient(
+    	linear,50% top, 50% bottom ,
+    	color-stop(0.00, rgba(0,0,0,0.5)),
+    	color-stop(0.50, rgba(0,0,0,0.9)),
+    	color-stop(1.00, rgba(0,0,0,0.5)));
+	margin: 0px auto;
+	.-webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+	transition: all 0.4s;
+}
+.gal-imgs:hover{
+	.-webkit-clip-path: polygon(50% 25%, 0 76%, 100% 76%);
+	.-webkit-mask-image: -webkit-gradient(
+		linear,left center,right center,
+		color-stop(0.00,  rgba(0,0,0,0.9)),
+ 		color-stop(0.50,  rgba(0,0,0,0.5)),
+    	color-stop(1.00,  rgba(0,0,0,0.9)));
+}
+@media(min-width: 768px) and (max-width: 991px){
+	.ic-row{
+		padding: 0px 2%;
+	}
+	h1.site-name{ 
+		font-size: 3em;
+	}
+	.gal-container{
+		margin-top: 3%;
+	}
+	.gal-imgs{
+		width: 82%;
+	}
+}
+@media(min-width: 992px) and (max-width: 1199px){
+	.ic-row{
+		padding: 0px 3%;
+	}
+	h1.site-name{
+		font-size: 3.5em;
+	}
+	.gal-container{
+		margin-top: 2.5%;
+	}
+	.gal-imgs{
+		width: 80%;
+	}
+}
+@media(min-width: 1200px){
+	.ic-row{
+		padding: 0px 3%;
+	}
+	h1.site-name{ 
+		font-size: 4em;
+	}
+	.gal-container{
+		margin-top: 2%;
+	}
+	.gal-imgs{
+		width: 80%;
+	}
+}
